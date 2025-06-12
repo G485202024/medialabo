@@ -1,0 +1,11 @@
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    text-shadow: 1px 1px 2px gray;
+}
+
+h2 {
+    background: linear-gradient(white, rgb(251, 169, 61));
+}
