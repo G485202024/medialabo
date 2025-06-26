@@ -12,6 +12,16 @@ function print(data) {
   console.log("都市名: " +data.name);
 }
 
+function se() {
+  let i = document.querySelector('input[name="toshi"]');
+  let name = i.value;
+  console.log("都市ID: "+name)
+}
+
+let b = document.querySelector('button#search');
+
+b.addEventListener('click', se); 
+
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
