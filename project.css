@@ -2,7 +2,7 @@ body {
     background-color: rgb(199, 242, 252);
 }
 
-div.zentai{
+div#zentai{
     display: flex;
     flex-direction: row;
     padding: 10px;
