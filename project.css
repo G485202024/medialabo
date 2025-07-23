@@ -1,17 +1,29 @@
 body {
-    background-color: rgb(199, 242, 252);
+    background-color: rgb(199, 227, 231);
 }
 
 div#zentai{
     display: flex;
     flex-direction: row;
     padding: 10px;
-    
+    gap: 10px;
+    flex-wrap: wrap;
 }
 div.a {
     width: 150px;
     border: 2px solid gray;
     background-color: rgb(207, 232, 220);
     padding: 10px;
+    gap: 10px;
     margin-right: 10px; 
+}
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-group > div {
+  display: flex;
+  gap: 4px;
 }

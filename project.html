@@ -13,6 +13,8 @@
       世界の天気（検索結果1件）
     </h1>
 
+    
+
     <select name="toshi" id="toshi">
         <option value="">都市IDを選んでください</option>
         <option value="360630(Cairo)">360630(カイロ)</option>
@@ -29,6 +31,50 @@
         <option value="5368361(Los Angeles)">5368361(ロサンゼルス)</option>
     </select>
     <button id="btn">検索</button>
+
+
+    <h2>表示する項目</h2>
+  <div class="checkbox-group">
+  <div>
+    <input type="checkbox" name="weather" id="ido" value="ido">
+    <label for="ido">緯度</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="keido" value="keido">
+    <label for="keido">経度</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="tenki" value="tenki">
+    <label for="tenki">天気</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="mtem" value="mten">
+    <label for="mten">最低気温</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="Mtem" value="mtem">
+    <label for="Mtem">最高気温</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="situdo" value="situdo">
+    <label for="situdo">湿度</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="husoku" value="husoku">
+    <label for="husoku">風速</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="kazamuki" value="kazamuki">
+    <label for="kazamuki">風向</label>
+  </div>
+  <div>
+    <input type="checkbox" name="weather" id="toshi1" value="toshi1">
+    <label for="toshi1">都市名</label>
+  </div>
+  <div>
+    <button id="select">表示</button>
+  </div>
+  </div>
 
     <div id="zentai">
       <div class="a">経度: 116.3972</div>

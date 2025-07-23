@@ -18,9 +18,6 @@ function se() {
   console.log("都市ID: "+name)
 }
 
-let b = document.querySelector('button#btn');
-
-b.addEventListener('click', se); 
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
@@ -29,55 +26,77 @@ function printDom(data) {
   let bo = document.querySelector('body'); 
   bo.insertAdjacentElement('beforeend', d);
 
-  let p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("軽度: " +data.coord.lon);
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#keido').checked) {
+    let p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("軽度: " +data.coord.lon);
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("緯度" + data.coord.lat );
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#ido').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("緯度: " + data.coord.lat );
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("天気: " +data.weather[0].description );
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#tenki').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("天気: " +data.weather[0].description );
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("最低気温: " +data.main.temp_min);
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#mtem').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("最低気温: " +data.main.temp_min);
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("最高気温: " +data.main.temp_max);
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#Mtem').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("最高気温: " +data.main.temp_max);
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("湿度: " +data.main.humidity);
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#situdo').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("湿度: " +data.main.humidity);
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("風速: " +data.wind.speed);
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#husoku').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("風速: " +data.wind.speed);
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("風向: " +data.wind.deg);
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#kazamuki').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("風向: " +data.wind.deg);
+    d.insertAdjacentElement('beforeend', p);
+  }
 
-  p = document.createElement('div');
-  p.setAttribute('class', 'a')
-  p.textContent = ("都市名: " +data.name);
-  d.insertAdjacentElement('beforeend', p);
+  if (document.querySelector('#toshi1').checked) {
+    p = document.createElement('div');
+    p.setAttribute('class', 'a')
+    p.textContent = ("都市名: " +data.name);
+    d.insertAdjacentElement('beforeend', p);
+  }
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
-let bb = document.querySelector('#btn');
-bb.addEventListener('click', sendRequest);
+let b = document.querySelector('#btn');
+b.addEventListener('click', sendRequest);
+b.addEventListener('click', se); 
+
+let bbo = document.querySelector('#select');
+bbo.addEventListener('click', sendRequest);
 
 
 
